@@ -1,0 +1,32 @@
+{
+    "name": "Luxury Fashion Store",
+    "pages": 20,
+    "components": [
+        "Home",
+        "Products",
+        "About",
+        "Collections",
+        "Product Detail",
+        "Cart",
+        "Checkout",
+        "Account",
+        "Wishlist",
+        "Contact",
+        "FAQ",
+        "Blog",
+        "Blog Post",
+        "Privacy Policy",
+        "Terms of Service",
+        "Shipping Information",
+        "Returns Policy",
+        "Size Guide",
+        "Store Locator",
+        "Search"
+    ],
+    "features": [
+        "High-end design",
+        "Luxury aesthetics",
+        "Responsive layout",
+        "Fast loading times"
+    ]
+}

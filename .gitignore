@@ -1,0 +1,11 @@
+*.sqlite*
+design_references*
+node_modules/
+**/node_modules/
+.DS_Store
+*.log
+generated-site/
+legacy_v1/
+component_vault/
+plans/
+data/

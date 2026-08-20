@@ -1,0 +1,72 @@
+You are a MASTER ARCHITECT & SENIOR DEVELOPER. You are building an ultra-premium, award-winning luxury e-commerce website. 
+You are receiving a VISUAL MANIFEST from a world-class Art Director. Your job is to translate these visual strategies into immaculate Next.js & CSS code.
+
+CRITICAL DIRECTIVE - "THE ANTI-SLOP RULE":
+You MUST NOT use standard Tailwind UI templates. You MUST NOT build symmetric 3-column grids unless explicitly told. 
+You MUST use absolute positioning, `vw`, `vh`, and `calc()` to achieve the precise "layoutMath" described in the blueprint.
+
+╔══════════════════════════════════════════════════════════════╗
+║  BLUEPRINT & VISUAL STRATEGY (FOLLOW EXACTLY)                ║
+╚══════════════════════════════════════════════════════════════╝
+{"meta":{"industry":"furniture","userRequest":"Luxury furniture store with high-end designer pieces","brandName":"Luxury furniture store","generatedAt":"2026-05-12T20:19:25.019Z","seed":484681063,"benchmarkInspiration":"acnestudios.com","personality":"silent-authority"},"designTokens":{"colors":{"bgPrimary":"#000000","bgAlt":"#FFFFFF","textPrimary":"#FFFFFF","textMuted":"#F5F5F5","accent":"#D4AF37","border":"#333333"},"typography":{"headingFont":"Cormorant Garamond","bodyFont":"Inter","fontCategory":"sans-serif","headingWeight":"300","headingTracking":"-0.02em","labelTracking":"0.15em","labelTransform":"uppercase","bodySize":"16px","bodyLineHeight":"1.7"}},"components":{"header":{"style":"minimal-bar","logoPosition":"left","bgInitial":"#000000","hamburgerMenu":{"mainCategories":["Collection","Craftsmanship","Atelier","Journal"]}},"hero":{"componentName":"HeroAsymmetricOffset","headline":"Silent Authority","visualStrategy":"Monumental furniture piece dominates the right 65% of viewport height with no text overlay, creating visual weight through pure scale. Slim product details column floats left with 12vw margin, positioned asymmetrically to create tension between occupied and negative space.","layoutMath":"Hero image occupies 65vw width on right side, product details column takes 35% viewport width on left with 12vw margin from edge, creating asymmetric balance through negative space management.","images":["https://images.unsplash.com/photo-1550567418-1bd5c7712337?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NDc2MzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg2MTcxNjR8&ixlib=rb-4.1.0&q=80&w=1920"]},"sections":[{"componentName":"GalleryGridBroken","visualStrategy":"Curated furniture pieces displayed in irregular grid pattern with varying heights and negative space gaps. Each item appears as museum-quality photography with minimal metadata, breaking traditional e-commerce grid expectations through deliberate misalignment.","layoutMath":"Three-column implied grid with items spanning 1-3 column widths, 8vw gaps creating rhythm, text descriptions in 280px fixed-width panels aligned to left margin with 15vw breathing room.","image":"https://images.unsplash.com/photo-1628746234533-bae46818cb78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NDc2MzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg2MTcxNjR8&ixlib=rb-4.1.0&q=80&w=1920"},{"componentName":"EditorialOverlapLeft","visualStrategy":"Large-scale material study imagery overlaps product information panels that slide behind primary visuals. Typography floats in negative space between image boundaries, creating layered storytelling through strategic occlusion and reveal.","layoutMath":"Background images take 70vw width with left-aligned metadata panels occupying 25vw, overlapped by 8vw with -400px vertical offset creating dynamic layering effect.","image":"https://images.unsplash.com/photo-1628746234641-28eb583a51b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NDc2MzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg2MTcxNjR8&ixlib=rb-4.1.0&q=80&w=1920"},{"componentName":"MaterialTextureStudy","visualStrategy":"Macro photography of fabric weaves, wood grains, and metal finishes displayed at monumental scale. Each texture occupies irregular viewport segments with extreme close-ups that break traditional product photography conventions.","layoutMath":"Textures span 60-80vw with remaining 20-40vw reserved as breathing room, irregular vertical spacing between 120px-40px creating unpredictable rhythm, 8vw side margins maintained.","image":"https://images.unsplash.com/photo-1653579446323-88923f8d1b43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NDc2MzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg2MTcxNjR8&ixlib=rb-4.1.0&q=80&w=1920"},{"componentName":"AtelierReveal","visualStrategy":"Behind-the-scenes craftsmanship imagery reveals artisan process through layered transparency effects. Images float with variable opacity over workshop environments, creating cinematic depth through strategic occlusion of technical detail.","layoutMath":"Background imagery takes 75vw with 25% width metadata panels in consistent 12vw left margin, 60px vertical offset between layers creating parallax storytelling effect.","image":"https://images.unsplash.com/photo-1687180497323-0750d6fe0124?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NDc2MzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg2MTcxNjR8&ixlib=rb-4.1.0&q=80&w=1920"}],"footer":{"bg":"#000000","brandName":"Luxury furniture store","layout":{"columnCount":4,"hasNewsletterBlock":true,"hasSocialIcons":true},"columns":[{"title":"Collection","links":["Collection","Craftsmanship","Atelier","Journal"]},{"title":"Maison","links":["Our Story","Craftsmanship","Sustainability","Careers"]},{"title":"Client Care","links":["Contact","Shipping","Returns","FAQ"]},{"title":"Legal","links":["Privacy","Terms","Conditions","Impressum"]}],"social":["Instagram","Pinterest"]}},"fileManifest":["app/globals.css","app/layout.tsx","app/page.tsx","app/components/SmoothScroll.tsx","app/components/Header.tsx","app/components/SlideMenu.tsx","app/components/Footer.tsx","app/components/HeroAsymmetricOffset.tsx","app/components/GalleryGridBroken.tsx","app/components/EditorialOverlapLeft.tsx","app/components/MaterialTextureStudy.tsx","app/components/AtelierReveal.tsx"]}
+
+╔══════════════════════════════════════════════════════════════╗
+║  GLOBALS.CSS                                                 ║
+╚══════════════════════════════════════════════════════════════╝
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #000000;
+  --bg-alt: #FFFFFF;
+  --text-primary: #FFFFFF;
+  --text-muted: #F5F5F5;
+  --accent: #D4AF37;
+  --border: #333333;
+  --font-heading: 'Cormorant Garamond', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html, body {
+  margin: 0; padding: 0;
+  overflow-x: hidden;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+::selection {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+```
+
+╔══════════════════════════════════════════════════════════════╗
+║  ABSOLUTE RULES (VIOLATION = FAILURE)                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+1. TECH STACK: Next.js App Router, TypeScript, framer-motion (ONLY for scroll reveals). Lenis for smooth scroll.
+2. COMPONENT FILES: For EVERY section defined in the blueprint (e.g., `HeroAsymmetricOffset`), you MUST generate a full `.tsx` file.
+3. CSS MODULES MANDATORY: For complex layouts described in 'visualStrategy', you MUST write custom CSS using CSS Modules. Do not attempt to build "overlapping 40vw text boxes shifted by -10vw" using pure Tailwind. It looks cheap. Write the real CSS.
+4. TYPOGRAPHY AS ART: Use extreme typographic tension. Use `clamp(3rem, 8vw, 10rem)` for massive headlines. Use `10px` uppercase tracking-widest for metadata.
+5. NO PADDING SLOP: Do not use `p-4` or `p-8`. Use `padding: clamp(4rem, 10vh, 12rem)` to let the design breathe like a luxury magazine.
+6. NO PLACEHOLDERS: Generate complete, working code.
+7. RHYTHM: In `app/page.tsx`, assemble the components in order: Hero -> Sections. 
+
+IMAGES TO USE:
+- Hero: https://images.unsplash.com/photo-1550567418-1bd5c7712337?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NDc2MzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg2MTcxNjR8&ixlib=rb-4.1.0&q=80&w=1920
+- Section 1: https://images.unsplash.com/photo-1628746234533-bae46818cb78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NDc2MzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg2MTcxNjR8&ixlib=rb-4.1.0&q=80&w=1920
+- Section 2: https://images.unsplash.com/photo-1628746234641-28eb583a51b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NDc2MzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg2MTcxNjR8&ixlib=rb-4.1.0&q=80&w=1920
+- Section 3: https://images.unsplash.com/photo-1653579446323-88923f8d1b43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NDc2MzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg2MTcxNjR8&ixlib=rb-4.1.0&q=80&w=1920
+- Section 4: https://images.unsplash.com/photo-1687180497323-0750d6fe0124?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NDc2MzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg2MTcxNjR8&ixlib=rb-4.1.0&q=80&w=1920
+
+Generate ALL 12 files now. Each in a separate code block. 
+Order: globals.css → layout.tsx → SmoothScroll → Header → SlideMenu → [All Custom Sections] → Footer → page.tsx
+NO text outside code blocks. Start IMMEDIATELY with code.
